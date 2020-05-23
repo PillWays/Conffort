@@ -144,6 +144,10 @@ button{
     background-size: 50px 50px;
 }
 
+.social-link:hover{
+    transform: scale(1.2);
+}
+
 .social-link.twitter{
     background-image: url('imagenes/twitter.svg');
     
