@@ -135,3 +135,17 @@ body{
 #fp-nav ul li a span{
     background: #2799B5;
 }
+
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev{
+    top: 95%;
+}
+
+.fp-controlArrow.fp-next{
+    border-width: 30px 0px 30px 30px;
+}
+
+.fp-controlArrow.fp-prev{
+    border-width: 30px 30px 30px 0;
+}
+
