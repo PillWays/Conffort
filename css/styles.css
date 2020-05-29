@@ -8,14 +8,9 @@ body{
     font-family: 'Trebuchet MS', 'Roboto';
 }
 
-.hero{
-    background-image: url(../images/shoes_nike.jpg);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-}
+
+/* ---------------ESTILOS BARRA DE NAVEGACION --------------------*/
+
 
 .hero__header{
     background: rgba(0, 0, 0, 0.7);
@@ -67,6 +62,32 @@ body{
 .hero__item--list a:hover{
     border-bottom: solid rgb(236, 236, 15) 3px;
 }
+
+/* Estilos del HERO  */
+
+
+.hero{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero__container article:nth-child(1){
+    background-image: url(../images/shoes_nike.jpg);
+}
+
+.hero__container article:nth-child(2){
+    background-image: url(../images/nikeStyle.jpg);
+}
+
+.hero__container article:nth-child(3){
+    background-image: url(../images/tshirt_nike.jpeg);
+}
+
+.hero__container article:nth-child(4){
+    background-image: url(../images/shoes_nike2.jpg);
+}
+
 
 .hero__text{
     position: absolute;
