@@ -97,7 +97,7 @@ body{
 }
 
 .hero__container article:nth-child(2){
-    background-image: url(../images/nikeStyle.jpg);
+    background-image: url(../images/nikeEverywhere.jpg);
 }
 
 .hero__container article:nth-child(3){
@@ -110,9 +110,8 @@ body{
 
 
 .hero__text{
-    position: absolute;
-    top: 420px;
-    left: 20px;
+    margin: 0 30px;
+    display: inline-block;
 }
 
 .hero__title{
@@ -123,9 +122,34 @@ body{
     font-size: 18px;
 }
 
+.hero #text1{
+    position: absolute;
+    bottom: 200px;
+}
 
+.hero #text2{
+    color: white;
+    position: absolute;
+    bottom: 300px;
+    left: 1600px;
+    
+}
 
+.hero #text3{
+    color: white;
+    position: absolute;
+    top: 190px;
+    left: 3600px;
+    
+}
 
+.hero #text4{
+    color: black;
+    position: absolute;
+    top: 180px;
+    left: 4100px;
+    
+}
 
 
 
@@ -138,7 +162,7 @@ body{
 
 .fp-controlArrow.fp-next,
 .fp-controlArrow.fp-prev{
-    top: 95%;
+    top: 80%;
 }
 
 .fp-controlArrow.fp-next{
