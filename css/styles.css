@@ -17,5 +17,72 @@ body{
     background-size: cover;
 }
 
+.hero__header{
+    background: rgba(0, 0, 0, 0.7);
+    /* backdrop-filter: blur(5px); */
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero__logo{
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 75px;
+    height: 75px;
+}
+
+.logo__text{
+    font-size: 50px;
+    color: white;
+    margin-left: 10px;
+    font-family: 'Squada one';
+}
+
+.hero__list{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    /* background-color: salmon; */
+    font-size: 18px;
+    /* margin-right: 20px; */
+}
+
+.hero__item--list{
+    padding-right: 20px;
+
+}
+
+.hero__item--list a{
+    text-decoration: none;
+    color: white;
+    transition: all 200ms ease-out;
+}
+
+.hero__item--list a:hover{
+    border-bottom: solid rgb(236, 236, 15) 3px;
+}
+
+.hero__text{
+    position: absolute;
+    top: 420px;
+    left: 20px;
+}
+
+.hero__title{
+    font-size: 50px;
+}
+
+.hero__paragraph{
+    font-size: 18px;
+}
+
+
+
 
 
