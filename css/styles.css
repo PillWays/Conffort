@@ -12,7 +12,7 @@ body{
 /* ---------------ESTILOS BARRA DE NAVEGACION --------------------*/
 
 
-.hero__header{
+.header{
     background: rgba(0, 0, 0, 0.7);
     /* backdrop-filter: blur(5px); */
     height: 90px;
@@ -21,7 +21,7 @@ body{
     align-items: center;
 }
 
-.hero__logo{
+.header__logo{
     margin-left: 8px;
     display: flex;
     align-items: center;
@@ -39,7 +39,7 @@ body{
     font-family: 'Squada one';
 }
 
-.hero__list{
+.header__menulist{
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
@@ -48,18 +48,18 @@ body{
     /* margin-right: 20px; */
 }
 
-.hero__item--list{
+.menu__item  {
     padding-right: 20px;
 
 }
 
-.hero__item--list a{
+.menu__item a{
     text-decoration: none;
     color: white;
     transition: all 200ms ease-out;
 }
 
-.hero__item--list a:hover{
+.menu__item a:hover{
     border-bottom: solid rgb(236, 236, 15) 3px;
 }
 
