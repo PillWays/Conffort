@@ -9,16 +9,24 @@ body{
 }
 
 
+
+
+
+
+
 /* ---------------ESTILOS BARRA DE NAVEGACION --------------------*/
 
 
 .header{
     background: rgba(0, 0, 0, 0.7);
     /* backdrop-filter: blur(5px); */
-    height: 90px;
+    height: 70px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 70;
 }
 
 .header__logo{
@@ -28,8 +36,8 @@ body{
 }
 
 .logo{
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
 }
 
 .logo__text{
@@ -38,6 +46,7 @@ body{
     margin-left: 10px;
     font-family: 'Squada one';
 }
+
 
 .header__menulist{
     display: flex;
@@ -49,19 +58,30 @@ body{
 }
 
 .menu__item  {
-    padding-right: 20px;
+    margin: 15px;
+}
 
+.menu_item, .menu__item a{
+    text-decoration: none;
+    color: white;
+    transition: all 400ms ease;
+}
+
+.header__menulist li.active{
+    border-bottom: solid #2799B5 3px;
 }
 
 .menu__item a{
-    text-decoration: none;
-    color: white;
-    transition: all 200ms ease-out;
+    margin: 0;
+    padding: 0;
+    transition: 300ms all ease-in;
 }
 
-.menu__item a:hover{
-    border-bottom: solid rgb(236, 236, 15) 3px;
+.menu__item.active a, .menu__item:hover a{
+    color: #2799B5;
 }
+
+
 
 /* Estilos del HERO  */
 
@@ -107,3 +127,11 @@ body{
 
 
 
+
+
+
+/* ----------------------ESTILOS PERSONALIZABLES DE FULLPAGE ---------------------*/
+
+#fp-nav ul li a span{
+    background: #2799B5;
+}
