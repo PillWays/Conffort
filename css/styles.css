@@ -92,9 +92,9 @@ body{
 
 
 .hero{
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
 }
 
 .hero__container article:nth-child(1){
@@ -117,6 +117,8 @@ body{
 .hero__text{
     margin: 0 30px;
     display: inline-block;
+    position: relative;
+    z-index: 99;
 }
 
 .hero__title{
