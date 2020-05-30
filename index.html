@@ -85,17 +85,23 @@
             </div>
         </section>
 
-        <footer class="section">
+        <footer class="section footer">
             <div class="footer__container">
-                <div class="footer__text">
-                    <h1 class="footer__tittle"> Contact Us</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, tenetur?</p>
-                </div>
-
-                <div class="footer__form">
-                    <label for="mail">Type your email</label>
-                    <input type="email" placeholder="example@gmail.com">
-                    <input type="submit" value="Send now">
+                <div class="footer__textWrapper">
+                    <div class="footer__text">
+                        <h1 class="footer__tittle"> Contact Us</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, tenetur?</p>
+                    </div>
+    
+                    <form class="footer__form">
+                        <div class="form__mailwrapper">
+                            <label for="contactMail">Type your email:</label>
+                            <input name="contactMail" id="contactMail" type="email" placeholder="example@gmail.com" class="footer__mail" required size="51">
+                        </div>
+                        <input type="submit" value="Send now" class="footer__button">
+                    </form>
+                    
+                    
                 </div>
 
                 <div class="footer__tab">

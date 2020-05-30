@@ -219,7 +219,94 @@ body{
 
 /* -------------Estilos footer-------- */
 
+.footer{
+    /* background-image: url(../images/nikeview.jpg); */
+    background: linear-gradient(-60deg, rgba(255,255,255,0), rgba(9,3,38,1)), url(../images/showNike.jpg);
+
+    background-position: left;
+    background-size: inherit;
+    object-fit: cover;
+    background-color: black;
+
+
+}
+
+.footer__container{
+    background: rgb(8,2,37);
+    background: linear-gradient(70deg, rgba(8,2,37,0.9304096638655462) 0%, rgba(6,2,28,0.8379726890756303) 29%, rgba(5,1,23,0.700717787114846) 61%, rgba(50,130,130,0.5802696078431373) 93%);
+    backdrop-filter:  blur(3px);
+    height: inherit;
+    padding-top: 200px;
+    color: white;
+}
+
+.footer__textWrapper{
+    /* background-color: salmon; */
+    margin-left: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    
+    
+
+}
+
+
+
+.footer__tittle{
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
  
+.footer__text p, .footer__form{
+    font-size: 18px;
+}
+
+.footer__form{
+    margin-top: 20px;
+    /* background-color: corsal; */
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.footer__mail{
+    padding: 8px;
+    font-size: 16px;
+}
+
+.footer__button{
+    font-size: 16px;
+    background-color: #0e9aa7;
+    padding: 15px;
+    margin-top: 10px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    width: 150px;
+    align-self: center;
+    
+}
+
+.footer__button:hover{
+    background-color: #d92027;
+}
+
+
+.footer__tab{
+    background-color: #010814;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
 
 
 
