@@ -94,6 +94,7 @@ body{
     background-position: center;
     background-size: cover;
     object-fit: cover;
+    background-color: teal;
     
 }
 
@@ -110,7 +111,7 @@ body{
 }
 
 .hero__container article:nth-child(4){
-    background-image: url(../images/shoes_nike2.jpg);
+    background-image: url(../images/nikeSunset.jpg);
 }
 
 
@@ -170,8 +171,6 @@ body{
 
 .about__paragraph{
     font-size: 18px;
-    font-family: 'Roboto';
-    font-weight: 400;
 }
 
 /* .about__image--wrapper{
@@ -185,6 +184,7 @@ body{
     -webkit-box-shadow: 27px 17px 31px 0px rgba(0,0,0,0.44);
     -moz-box-shadow: 27px 17px 31px 0px rgba(0,0,0,0.44);
     box-shadow: 27px 17px 31px 0px rgba(0,0,0,0.44);
+    object-fit: cover;
 }
 
 .about__button{
@@ -264,6 +264,7 @@ body{
 .footer__mail{
     padding: 8px;
     font-size: 16px;
+    border-radius: 10px;
 }
 
 .footer__button{
@@ -415,6 +416,11 @@ body{
         align-items: flex-start;
     }
 
+    .footer__textWrapper{
+        position: absolute;
+        top: 40%;
+    }
+
 
 }
 
@@ -422,6 +428,7 @@ body{
     .hero__title{
         font-size: 35px;
     }
+   
     
 }
 
@@ -466,5 +473,147 @@ body{
         padding: 10px;
         text-align: center;
     }
+
     
+    .footer__textWrapper{
+        /* background-color: salmon; */
+        margin: 0 20px;
+        text-align: center;
+    }
+    
+    .footer__mail{
+        width: 300px;
+    }
+    .footer__button{
+        font-size: 16px;
+        padding: 10px; 
+    }
+
+    .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next  {
+        top: 95%;
+    }
+    
+    .hero__text{
+        top: 76%;
+        margin-left: 10px;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    
+    .about__tittle{
+        font-size: 30px;
+    }
+    
+    .about__paragraph{
+        font-size: 14px;
+    }
+    
+    /* .about__image--wrapper{
+        margin-top: 120px;
+
+    } */
+/*     
+    .about__image{
+        width: 400px;
+        height: 200px;
+    } */
+    
+    .about__button{
+        margin-top: 10px;
+        display: block;
+        padding: 8px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+    .logo__text{
+        font-size: 30px;
+    }
+    .header__menulist{
+        font-size: 16px;
+      
+    }
+    .menu__item  {
+        margin: 0 10px;
+        text-align: center;
+    }
+
+
+    .hero__title{
+        font-size: 28px;
+    }
+    
+    .hero__paragraph{
+        font-size: 18px;
+    }
+
+  
+    .about__text{
+        min-width: 0;
+    }
+    .about__tittle{
+        font-size: 28px;
+    }
+    
+    .about__paragraph{
+        font-size: 14px;
+    }
+    
+     .about__image--wrapper{
+        margin-top: 90px
+
+    } 
+     
+    .about__image{
+        width: 300px;
+        height: 150px;
+    } 
+    
+    .about__button{
+        margin-top: 10px;
+        padding: 6px;
+        font-size: 14px;
+    }
+
+
+
+    .footer__tittle{
+        font-size: 40px;
+    }
+    
+   
+    .footer__text p, .footer__form{
+        font-size: 16px;
+    }
+    
+    .footer__mail{
+        width: 250px;
+    }
+    
+    .footer__button{
+        font-size: 16px;
+        padding: 10px;
+        width: 120px;
+        
+        
+    }
+
+    .footer__logo h2{
+        font-size: 18px;       
+    }
+    .footer__logo p{
+        font-size: 10px;
+    }
+       
+    .social__tittle{
+        font-size: 18px;
+    }
+    .social__icon--item{
+        font-size: 12px;
+        
+    }
 }
