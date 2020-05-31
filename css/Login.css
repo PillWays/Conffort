@@ -145,19 +145,19 @@ button{
 }
 
 .social-link.twitter{
-    background-image: url('imagenes/twitter.svg');
+    background-image: url('../imagenes/twitter.svg');
     
 }
 .social-link.facebook{
-    background-image: url('imagenes/facebook.svg');
+    background-image: url('../imagenes/facebook.svg');
     /* background-size: 50px 50px; */
 }
 .social-link.instagram{
-    background-image: url('imagenes/instagram.svg');
+    background-image: url('../imagenes/instagram.svg');
     /* background-size: 50px 50px; */
 }
 .social-link.github{
-    background-image: url('imagenes/github.svg');
+    background-image: url('../imagenes/github.svg');
     /* background-size: 50px 50px; */
 }
 
