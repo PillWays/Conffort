@@ -245,9 +245,6 @@ body{
     margin-left: 20px;
     display: inline-flex;
     flex-direction: column;
-    
-    
-
 }
 
 
@@ -256,6 +253,10 @@ body{
     font-size: 50px;
     margin-bottom: 10px;
     text-align: center;
+}
+
+.footer__tittle span{
+    color: #12c3c3;
 }
  
 .footer__text p, .footer__form{
@@ -302,9 +303,58 @@ body{
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+    height: 80px;
 }
 
+.footer__logo h2{
+    font-family: 'Squada one';
+    font-size: 23px;
+    letter-spacing: 2px;
+    color: #0e9aa7;
+}
+.footer__logo p{
+    font-size: 12px;
+}
 
+.footer__social{
+    /* background-color: coral; */
+    width: 160px;
+}
+
+.social__tittle{
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0e9aa7;
+}
+
+.social__icons{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.social__icon--item{
+    cursor: pointer;
+    border: solid white 1px;
+    padding: 5px;
+    
+}
+
+.social__icon--item a{
+    text-decoration: none;
+    color:white ;
+    transition: all ease-in 300ms;
+    
+}
+
+.social__icon--item:hover a{
+    color: #0e9aa7;
+}
 
 
 
