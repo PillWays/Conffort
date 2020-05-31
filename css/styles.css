@@ -20,7 +20,6 @@ body{
 .header{
     background: rgba(0, 0, 0, 0.7);
     /* backdrop-filter: blur(5px); */
-    height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -94,6 +93,7 @@ body{
 .hero{
     background-position: center;
     background-size: cover;
+    object-fit: cover;
     
 }
 
@@ -119,10 +119,13 @@ body{
     display: inline-block;
     position: relative;
     z-index: 99;
+    position: absolute;
+    top: 70%;
 }
 
 .hero__title{
     font-size: 50px;
+   
 }
 
 .hero__paragraph{
@@ -130,32 +133,20 @@ body{
 }
 
 .hero #text1{
-    position: absolute;
-    bottom: 200px;
+   
+    color: black;
 }
 
 .hero #text2{
     color: white;
-    position: absolute;
-    bottom: 300px;
-    left: 1600px;
-    
 }
 
 .hero #text3{
     color: white;
-    position: absolute;
-    top: 190px;
-    left: 3600px;
-    
 }
 
 .hero #text4{
-    color: black;
-    position: absolute;
-    top: 180px;
-    left: 4100px;
-    
+    color: rgb(0, 0, 0);
 }
 
 
@@ -369,7 +360,7 @@ body{
 
 .fp-controlArrow.fp-next,
 .fp-controlArrow.fp-prev{
-    top: 80%;
+    top: 90%;
 }
 
 .fp-controlArrow.fp-next{
@@ -380,3 +371,100 @@ body{
     border-width: 30px 30px 30px 0;
 }
 
+
+
+/* Responsive Design */
+@media screen and (max-width: 1040px){
+
+    .about__container{
+        /* background-color: teal; */
+        flex-direction: column;
+    }
+
+    .about__text{
+        margin-top: 70px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+   
+    .about__image{
+        width: 500px;
+        height: 270px;
+    }
+
+    .about__paragraph{
+        font-size: 16px;
+    }
+
+    .about__button{
+        padding: 10px;
+    }
+    
+
+    .hero__title{
+        font-size: 38px;
+    }
+    
+    .hero__paragraph{
+        font-size: 20px;
+    }
+
+    .footer__container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+    .hero__title{
+        font-size: 35px;
+    }
+    
+}
+
+@media screen and (max-width: 658px){
+    .header{
+        flex-direction: column;
+
+    }
+
+    .about__container{
+        /* background-color: teal; */
+        flex-direction: column-reverse;
+    }
+
+    
+    .about__tittle{
+        font-size: 40px;
+    }
+    
+    .about__paragraph{
+        font-size: 16px;
+    }
+
+    .about__text{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .about__image--wrapper{
+        margin-top: 120px;
+        margin-bottom: 5px;
+    }
+    
+    .about__image{
+        width: 400px;
+        height: 200px;
+    }
+    
+    .about__button{
+        margin-top: 10px;
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+    
+}
