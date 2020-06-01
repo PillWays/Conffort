@@ -13,19 +13,65 @@
 }
 
 .header{
-    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    /* backdrop-filter: blur(5px); */
+    width: 100%;
     display: flex;
-    justify-content: stretch;
-    height: 75px;
-    font-family: 'Squada One', cursive;
-    color: white;
-    font-size: 50px;
-    /* padding: 0 70px; */
+    justify-content: space-between;
     align-items: center;
 }
 
+.header__logo{
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.logo__text a{
+    text-decoration: none;
+    color: white;
+}
+
 .logo{
-    margin-bottom: 18px;
+    width: 65px;
+    height: 65px;
+}
+
+.logo__text{
+    font-size: 50px;
+    color: white;
+    margin-left: 10px;
+    font-family: 'Squada one';
+}
+
+
+.header__menulist{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    /* background-color: salmon; */
+    font-size: 18px;
+    /* margin-right: 20px; */
+}
+
+.menu__item  {
+    margin: 15px;
+}
+
+.menu_item, .menu__item a{
+    text-decoration: none;
+    color: white;
+    transition: all 400ms ease;
+}
+
+.menu__item a{
+    margin: 0;
+    padding: 0;
+    transition: 300ms all ease-in;
+}
+
+.menu__item:hover a{
+    color: #2799B5;
 }
 
 .product-grid{
