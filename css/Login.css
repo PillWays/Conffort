@@ -12,15 +12,49 @@
 }
 
 .header{
-    background: black;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
     display: flex;
-    justify-content: stretch;
-    height: 75px;
+    justify-content: center;
     align-items: center;
-    font-family: 'Squada One', cursive;
-    color: white;
-    font-size: 50px;
 }
+
+.header__logo{
+    display: flex;
+    align-items: center;
+    padding-right: 70px;
+}
+
+.logo__text a{
+    text-decoration: none;
+    color: white;
+    transition: all ease-in 300ms;
+    letter-spacing: 2px;
+}
+
+.logo{
+    width: 55px;
+    height: 55px;
+
+}
+
+.logo__text{
+    font-size: 40px;
+    margin-left: 10px;
+    font-family: 'Squada one';
+    
+}
+
+.logo__text:hover a{
+    color: #2799B5;
+}
+
+.register__text{
+    margin-top: 70px ;
+}
+
+
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -39,10 +73,13 @@ a{
     color: linear-gradient(to right, #6dd5ed, #2193b0);
 }
 
-h1{
+.register__title{
+    font-weight: lighter;
+    font-size: 30px;
     text-align: center;
-    font-weight: 700;
 }
+
+
 form{
     background: 40px 0;
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.4);
