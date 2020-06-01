@@ -13,7 +13,7 @@
 }
 
 .header{
-    background: rgba(0, 0, 0, 0.7);
+    background: #010814;
     /* backdrop-filter: blur(5px); */
     width: 100%;
     display: flex;
@@ -295,6 +295,86 @@
 
 }
 
+
+
+
+/* -----------------------ESTILOS PARA EL FOOTER----------------- */
+
+
+.footer__tab{
+    background-color: #010814;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100px;
+    color: white;
+}
+
+.footer__logo h2{
+    font-family: 'Squada one';
+    font-size: 23px;
+    letter-spacing: 2px;
+    color: #0e9aa7;
+}
+.footer__logo p{
+    font-size: 12px;
+}
+
+.footer__social{
+    width: 160px;
+}
+
+.social__tittle{
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0e9aa7;
+}
+
+.social__icons{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.social__icon--item{
+    cursor: pointer;
+    border: solid white 1px;
+    padding: 5px;
+    
+}
+
+.social__icon--item a{
+    text-decoration: none;
+    color:white ;
+    transition: all ease-in 300ms;
+    
+}
+
+.social__icon--item:hover a{
+    color: #0e9aa7;
+}
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width:990px){
     .product-grid{ margin-bottom: 30px; }
+}
+
+@media only screen and (max-width:450px){
+    .header{
+        flex-direction: column;
+    }
 }
