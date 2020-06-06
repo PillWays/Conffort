@@ -1,0 +1,205 @@
+:root{
+    --colortextos: #49454567;
+
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo{
+    display: flex;
+    align-items: center;
+    padding-right: 70px;
+}
+
+.logo__text a{
+    text-decoration: none;
+    color: white;
+    transition: all ease-in 300ms;
+    letter-spacing: 2px;
+}
+
+.logo{
+    width: 55px;
+    height: 55px;
+
+}
+
+.logo__text{
+    font-size: 40px;
+    margin-left: 10px;
+    font-family: 'Squada one';
+    
+}
+
+.logo__text:hover a{
+    color: #2799B5;
+}
+
+.register__text{
+    margin-top: 70px ;
+}
+
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 650px;
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+p{
+    text-align: center;
+    margin: 10px auto;
+}
+a{
+    color: linear-gradient(to right, #6dd5ed, #2193b0);
+}
+
+.register__title{
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+form{
+    background: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2%;
+    
+}
+
+form .grupo{
+    position: relative;
+    margin: 45px;
+}
+
+input{
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colortextos);
+}
+
+input:focus{
+    outline: none;
+    color: #5E5D5D;
+}
+
+label{
+    color: var(--colortextos);
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 12px;
+    color: #2196f3;
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 100%;
+}
+
+button{
+    font-family: 'roboto';
+     /* Chrome 10-25, Safari 5.1-6 */
+     background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     background: linear-gradient(to right, #6dd5ed, #2193b0); 
+     border: none;
+     display: block;
+     width: 80%;
+     margin: 10px auto;
+     color: white;
+     height: 40px;
+     font-size: 16px;
+     cursor: pointer;
+
+}
+
+.social-link{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    background-size: 50px 50px;
+}
+
+.social-link:hover{
+    transform: scale(1.2);
+}
+
+.social-link.twitter{
+    background-image: url('../images/twitter.svg');
+    
+}
+.social-link.facebook{
+    background-image: url('../images/facebook.svg');
+    /* background-size: 50px 50px; */
+}
+.social-link.instagram{
+    background-image: url('../images/instagram.svg');
+    /* background-size: 50px 50px; */
+}
+.social-link.github{
+    background-image: url('../images/github.svg');
+    /* background-size: 50px 50px; */
+}
+
+@media screen and (max-width:500px){
+    form{
+        width: 80%;
+    }
+}
