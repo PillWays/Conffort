@@ -1,0 +1,621 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Roboto';
+}
+
+
+textarea {
+  resize: none;
+}
+
+
+
+
+/* ---------------ESTILOS BARRA DE NAVEGACION --------------------*/
+
+
+.header{
+    background: rgba(0, 0, 0, 0.7);
+    /* backdrop-filter: blur(5px); */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 70;
+}
+
+.header__logo{
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.logo__text a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    width: 65px;
+    height: 65px;
+}
+
+.logo__text{
+    font-size: 50px;
+    color: white;
+    margin-left: 10px;
+    font-family: 'Squada one';
+}
+
+
+.header__menulist{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    /* background-color: salmon; */
+    font-size: 18px;
+    /* margin-right: 20px; */
+}
+
+.menu__item  {
+    margin: 15px;
+}
+
+.menu_item, .menu__item a{
+    text-decoration: none;
+    color: white;
+    transition: all 400ms ease;
+}
+
+.header__menulist li.active{
+    border-bottom: solid #2799B5 3px;
+}
+
+.menu__item a{
+    margin: 0;
+    padding: 0;
+    transition: 300ms all ease-in;
+}
+
+.menu__item.active a, .menu__item:hover a{
+    color: #2799B5;
+}
+
+
+
+/* Estilos del HERO  */
+
+
+.hero{
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    background-color: teal;
+    
+}
+
+.hero__container article:nth-child(1){
+    background-image: url(../images/shoes_nike.jpg);
+}
+
+.hero__container article:nth-child(2){
+    background-image: url(../images/nikeEverywhere.jpg);
+}
+
+.hero__container article:nth-child(3){
+    background-image: url(../images/tshirt_nike.jpeg);
+}
+
+.hero__container article:nth-child(4){
+    background-image: url(../images/nikeSunset.jpg);
+}
+
+
+.hero__text{
+    margin: 0 30px;
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    position: absolute;
+    top: 70%;
+}
+
+.hero__title{
+    font-size: 50px;
+   
+}
+
+.hero__paragraph{
+    font-size: 18px;
+}
+
+.hero #text1{
+   
+    color: black;
+}
+
+.hero #text2{
+    color: white;
+}
+
+.hero #text3{
+    color: white;
+}
+
+.hero #text4{
+    color: rgb(0, 0, 0);
+}
+
+
+/* -----------------ESTILOS PARA LA SECCION DE ABOUT US */
+
+.about__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.about__text{
+    width: 400px;
+    min-width: 400px;
+}
+
+.about__tittle{
+    font-size: 60px;
+}
+
+.about__paragraph{
+    font-size: 18px;
+}
+
+/* .about__image--wrapper{
+    background-color: salmon;
+    
+} */
+
+.about__image{
+    width: 600px;
+    height: 470px;
+    -webkit-box-shadow: 27px 17px 31px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: 27px 17px 31px 0px rgba(0,0,0,0.44);
+    box-shadow: 27px 17px 31px 0px rgba(0,0,0,0.44);
+    object-fit: cover;
+}
+
+.about__button{
+    margin-top: 10px;
+    display: inline-block;
+    padding: 15px;
+    background-color: #26b1b1;
+    color: white;
+    border-radius: 7px;
+    box-shadow: -14px 10px 15px -7px rgba(0,0,0,0.75);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+}
+
+.about__button:hover{
+    background-color: black;
+}
+
+.about__text span{
+    color: #12c3c3;
+}
+
+/* -------------Estilos footer-------- */
+
+.footer{
+    /* background-image: url(../images/nikeview.jpg); */
+    background: linear-gradient(-60deg, rgba(255,255,255,0), rgba(9,3,38,1)), url(../images/showNike.jpg);
+
+    background-position: left;
+    background-size: inherit;
+    object-fit: cover;
+    background-color: black;
+
+
+}
+
+.footer__container{
+    background: rgb(8,2,37);
+    background: linear-gradient(70deg, rgba(8,2,37,0.9304096638655462) 0%, rgba(6,2,28,0.8379726890756303) 29%, rgba(5,1,23,0.700717787114846) 61%, rgba(50,130,130,0.5802696078431373) 93%);
+    backdrop-filter:  blur(3px);
+    height: inherit;
+    padding-top: 200px;
+    color: white;
+}
+
+.footer__textWrapper{
+    /* background-color: salmon; */
+    margin-left: 20px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+
+
+.footer__tittle{
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer__tittle span{
+    color: #12c3c3;
+}
+ 
+.footer__text p, .footer__form{
+    font-size: 18px;
+}
+
+.footer__form{
+    margin-top: 20px;
+    /* background-color: corsal; */
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.footer__mail{
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.footer__button{
+    font-size: 16px;
+    background-color: #0e9aa7;
+    padding: 15px;
+    margin-top: 10px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    width: 150px;
+    align-self: left;
+    
+}
+
+.footer__button:hover{
+    background-color: #d92027;
+}
+
+
+.footer__tab{
+    background-color: #010814;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+}
+
+.footer__logo h2{
+    font-family: 'Squada one';
+    font-size: 23px;
+    letter-spacing: 2px;
+    color: #0e9aa7;
+}
+.footer__logo p{
+    font-size: 12px;
+}
+
+.footer__social{
+    /* background-color: coral; */
+    width: 160px;
+}
+
+.social__tittle{
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0e9aa7;
+}
+
+.social__icons{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.social__icon--item{
+    cursor: pointer;
+    border: solid white 1px;
+    padding: 5px;
+    
+}
+
+.social__icon--item a{
+    text-decoration: none;
+    color:white ;
+    transition: all ease-in 300ms;
+    
+}
+
+.social__icon--item:hover a{
+    color: #0e9aa7;
+}
+
+
+
+
+
+
+/* ----------------------ESTILOS PERSONALIZABLES DE FULLPAGE ---------------------*/
+
+#fp-nav ul li a span{
+    background: #2799B5;
+}
+
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev{
+    top: 90%;
+}
+
+.fp-controlArrow.fp-next{
+    border-width: 30px 0px 30px 30px;
+}
+
+.fp-controlArrow.fp-prev{
+    border-width: 30px 30px 30px 0;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 1040px){
+
+    .about__container{
+        /* background-color: teal; */
+        flex-direction: column;
+    }
+
+    .about__text{
+        margin-top: 70px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+   
+    .about__image{
+        width: 500px;
+        height: 270px;
+    }
+
+    .about__paragraph{
+        font-size: 16px;
+    }
+
+    .about__button{
+        padding: 10px;
+    }
+    
+
+    .hero__title{
+        font-size: 38px;
+    }
+    
+    .hero__paragraph{
+        font-size: 20px;
+    }
+
+    .footer__container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .footer__textWrapper{
+        position: absolute;
+        top: 40%;
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+    .hero__title{
+        font-size: 35px;
+    }
+   
+    
+}
+
+@media screen and (max-width: 658px){
+    .header{
+        flex-direction: column;
+
+    }
+
+    .about__container{
+        /* background-color: teal; */
+        flex-direction: column-reverse;
+    }
+
+    
+    .about__tittle{
+        font-size: 40px;
+    }
+    
+    .about__paragraph{
+        font-size: 16px;
+    }
+
+    .about__text{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .about__image--wrapper{
+        margin-top: 120px;
+        margin-bottom: 5px;
+    }
+    
+    .about__image{
+        width: 400px;
+        height: 200px;
+    }
+    
+    .about__button{
+        margin-top: 10px;
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    
+    .footer__textWrapper{
+        /* background-color: salmon; */
+        margin: 0 20px;
+        text-align: center;
+    }
+    
+    .footer__mail{
+        width: 300px;
+    }
+    .footer__button{
+        font-size: 16px;
+        padding: 10px; 
+    }
+
+    .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next  {
+        top: 95%;
+    }
+    
+    .hero__text{
+        top: 76%;
+        margin-left: 10px;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    
+    .about__tittle{
+        font-size: 30px;
+    }
+    
+    .about__paragraph{
+        font-size: 14px;
+    }
+    
+    /* .about__image--wrapper{
+        margin-top: 120px;
+
+    } */
+/*     
+    .about__image{
+        width: 400px;
+        height: 200px;
+    } */
+    
+    .about__button{
+        margin-top: 10px;
+        display: block;
+        padding: 8px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+    .logo__text{
+        font-size: 30px;
+    }
+    .header__menulist{
+        font-size: 16px;
+      
+    }
+    .menu__item  {
+        margin: 0 10px;
+        text-align: center;
+    }
+
+
+    .hero__title{
+        font-size: 28px;
+    }
+    
+    .hero__paragraph{
+        font-size: 18px;
+    }
+
+  
+    .about__text{
+        min-width: 0;
+    }
+    .about__tittle{
+        font-size: 28px;
+    }
+    
+    .about__paragraph{
+        font-size: 14px;
+    }
+    
+     .about__image--wrapper{
+        margin-top: 90px
+
+    } 
+     
+    .about__image{
+        width: 300px;
+        height: 150px;
+    } 
+    
+    .about__button{
+        margin-top: 10px;
+        padding: 6px;
+        font-size: 14px;
+    }
+
+
+
+    .footer__tittle{
+        font-size: 40px;
+    }
+    
+   
+    .footer__text p, .footer__form{
+        font-size: 16px;
+    }
+    
+    .footer__mail{
+        width: 250px;
+    }
+    
+    .footer__button{
+        font-size: 16px;
+        padding: 10px;
+        width: 120px;
+        
+        
+    }
+
+    .footer__logo h2{
+        font-size: 18px;       
+    }
+    .footer__logo p{
+        font-size: 10px;
+    }
+       
+    .social__tittle{
+        font-size: 18px;
+    }
+    .social__icon--item{
+        font-size: 12px;
+        
+    }
+}
