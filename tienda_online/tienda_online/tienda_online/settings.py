@@ -25,7 +25,7 @@ SECRET_KEY = 'bxt3)@6)1%7ia^!4%7wij^4)o^or2(v3s!lz1%xx^_i8==stia'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pinkyysubanda.nsupdate.info','127.0.0.1']
 
 
 # Application definition
