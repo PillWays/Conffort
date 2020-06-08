@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+    <link rel="icon" type="image/jpg" href="{% static 'Conffort/images/Logoicon.png' %}" />
+    <link rel="stylesheet" href="{% static 'Conffort/css/Login.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+</head>
+
+<header class="header">
+    <div class="header__logo">
+        <img src="{% static 'Conffort/images/logo.png' %}" alt="logo conffort" class="logo">
+        <h3 class="logo__text"> <a href="{% url 'inicio-url' %}">CONFFORT</a> </h3>
+    </div>
+</header>
+
+
+	{% comment %}
+		Se omidifico el codigo del formulario para capturar los datos
+		que el usuario ingrese.
+	{% endcomment %}
+
+
+
+<body>
+    <form action="/registro" id="form" method="POST">{% csrf_token %}
+        <div class="register__text">
+            <h1 class="register__title">Regístrate</h1>
+            <div class="grupo">
+                <input type="text" name="nombre-usuario" id="name" required> <span class="barra"></span>
+                <label for="nombre-usuario">Nombre</label>
+            </div>
+            <div class="grupo">
+                <input type="email" name="email-usuario" id="name" required> <span class="barra"></span>
+                <label for="email-usuario">Correo Electrónico</label>
+            </div>
+            <div class="grupo">
+                <input type="password" name="password-usuario" id="name" required> <span class="barra"></span>
+                <label for="password-usuario">Contraseña</label>
+            </div>
+
+            <button type="submit">Registrar</button>
+            <p>
+                ¿Ya tienes una cuenta? <a href="{% url 'login-url' %}">inicia sesión</a>
+            </p>
+
+        </div>
+
+        <div class="social">
+            <a href="https://twitter.com/PillWays" class="social-link twitter" target="_blank"></a>
+            <a href="https://www.facebook.com/TheFreaks4/" class="social-link facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/astra.666/" class="social-link instagram" target="_blank"></a>
+            <a href="https://github.com/Astra6116" class="social-link github" target="_blank"></a>
+        </div>
+    </form>
+</body>
+</html>

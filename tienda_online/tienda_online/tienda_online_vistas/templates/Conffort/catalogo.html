@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="icon" type="image/jpg" href="{% static 'Conffort/images/Logoicon.png' %}" />
+    <script src="https://kit.fontawesome.com/502b050bab.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'Conffort/css/catalogo.css' %}">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="{% static 'Conffort/images/logo.png' %}" alt="logo conffort" class="logo">
+            <h3 class="logo__text"> <a href="{% url 'inicio-url' %}">CONFFORT</a> </h3>
+        </div>
+
+	{% comment  %}
+	
+		La siguiente seccion fue modificada para mostrar el nombre
+		del usuario en el navbar
+
+	{% endcomment %}
+
+        <nav class="header__nav">
+            <ul class="header__menulist" id="menu">
+                <li class="menu__item active" data-menuanchor="home"  >
+                    <a href="{% url 'inicio-url' %}">Home</a>
+                </li>
+                <li class="menu__item" data-menuanchor="aboutUs"  >
+                    <a href="#"><strong>Usuario: {{nombre_login}}</strong></a>
+                </li>
+		<li>
+		<li class="menu__item active" data-menuanchor="delete-user" >
+		    <form class="footer__form" action="delete_user/{{id_user}}" method="POST">{% csrf_token %}
+			    <label for="delete-user-botton"></label>
+			    <input type="submit" name="delete-user-botton" value="Borrar Usuario" class="footer__button">
+		    </form>
+		</li>
+            </ul>
+        </nav>
+    </header>
+<!-------------------------------Articulos en tendencia----------------------------------->
+    <div class="heading">
+        <h1>EN TENDENCIA 🔥</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen1.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen2.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Jordan 1 Retro Varios Colores</h3>
+                        <div class="precio">$4500.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen3.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen4.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Vans Old Skool Classic</h3>
+                        <div class="precio">$1500.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen5.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen6.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-20%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Adidas Ultraboost 19 Pride</h3>
+                        <div class="precio descuento"><span>$2279.70</span> $1823.76</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen7.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen8.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-10%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Tenis Fila Disruptor II</h3>
+                        <div class="precio descuento"><span>$1500.00</span> $1350.60</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-------------------Articulos en Oferta--------------->
+    <div class="heading">
+        <h1>SUPER OFERTAS DE VERANO 🤑</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen9.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen10.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-40%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Tenis Nike ZoomX Vaporfly NEXT%</h3>
+                        <div class="precio descuento"><span>$4999.00</span> $2999.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen11.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen12.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-20%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Adidas Cosmic 2</h3>
+                        <div class="precio descuento"><span>$1599.00</span> $1279.50</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen13.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen14.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-30%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Tenis Puma X-RAY 0203</h3>
+                        <div class="precio descuento"><span>$1899.00</span> $1329.30</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen15.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen16.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-50%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Nike Air Force 1 Shadow</h3>
+                        <div class="precio descuento"><span>$3000.00</span> $1500.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--------------Cátalogo de productos------------>
+    <div class="heading">
+        <h1>NUESTRO CATÁLOGO ☣</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen1.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen2.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Jordan 1 Retro Varios Colores</h3>
+                        <div class="precio">$4500.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen3.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen4.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Vans Old Skool Classic</h3>
+                        <div class="precio">$1500.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen5.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen6.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-20%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Adidas Ultraboost 19 Pride</h3>
+                        <div class="precio descuento"><span>$4500.00</span> $2250.60</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen7.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen8.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-10%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Tenis Fila Disruptor II</h3>
+                        <div class="precio descuento"><span>$1500.00</span> $1350.60</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen9.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen10.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-40%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Tenis Nike ZoomX Vaporfly NEXT%</h3>
+                        <div class="precio descuento"><span>$4999.00</span> $2999.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen11.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen12.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-20%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Adidas Cosmic 2</h3>
+                        <div class="precio descuento"><span>$1599.00</span> $1279.50</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen13.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen14.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-30%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Tenis Puma X-RAY 0203</h3>
+                        <div class="precio descuento"><span>$1899.00</span> $1329.30</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-imagen">
+                        <a href="#">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen15.jpg' %}" class="foto1">
+                            <img loading="lazy" src="{% static 'Conffort/images/tenis/imagen16.jpg' %}" class="foto2">
+                        </a>
+                        <span class="etiqueta-disponible">STOCK</span>
+                        <span class="producto-descuento">-50%</span>
+                        <ul class="social">
+                            <li><a href="#" data-tip="Agregar al carrito"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#" data-tip="Favoritos"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="https://twitter.com/intent/tweet?text=Deberías%20revisar%20este%20articulo%20está%20en%20descuento%20en%20Conffort" target="blank_"" data-tip="Compartir"><i class="fa fa-share"></i></a></li>
+                            <li><a href="#" data-tip="Vista Rápida"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="contenido-producto">
+                        <h3 class="titulo"><a href="#"></a>Nike Air Force 1 Shadow</h3>
+                        <div class="precio descuento"><span>$3000.00</span> $1500.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__tab">
+                <div class="footer__logo">
+                    <h2>CONNFORT</h2>
+                    <p> © 2020 - CONNFORT  All Right Reserved </p>
+                </div>
+                <div class="footer__social">
+                    <h3 class="social__tittle">FOLLOW</h3>
+                    <ul class="social__icons">
+                        <li class="social__icon--item"> <a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li class="social__icon--item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="social__icon--item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                 </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
